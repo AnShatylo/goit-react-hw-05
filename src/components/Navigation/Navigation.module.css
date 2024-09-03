@@ -1,0 +1,14 @@
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.link {
+  color: white;
+}
+
+.activeLink {
+  color: white;
+  text-shadow: #fff 1px 0 10px;
+}
