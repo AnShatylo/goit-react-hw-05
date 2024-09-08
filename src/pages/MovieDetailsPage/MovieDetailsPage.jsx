@@ -33,7 +33,7 @@ export default function MovieDetailsPage() {
 
   return (
     <div>
-      <Link to={backLinkRef.current}>
+      <Link to={backLinkRef.current} state={location}>
         <MdOutlineArrowBack /> Go back
       </Link>
       {error && <ErrorMessage />}

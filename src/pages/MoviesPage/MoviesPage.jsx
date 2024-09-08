@@ -1,4 +1,4 @@
-import { useSearchParams, Link } from 'react-router-dom';
+import { useSearchParams, Link, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { searchMovies } from '../../services/movies-api';
 import css from './MoviesPage.module.css';
@@ -7,6 +7,7 @@ export default function MoviesPage() {
   const [params, setParams] = useSearchParams();
   const [movies, setMovies] = useState([]);
   const [error, setError] = useState('');
+  const location = useLocation();
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -53,7 +54,9 @@ export default function MoviesPage() {
         <ul className={css.movieList}>
           {movies.map(movie => (
             <li key={movie.id}>
-              <Link to={`/movies/${movie.id}`}>{movie.title}</Link>
+              <Link to={`/movies/${movie.id}`} state={location}>
+                {movie.title}
+              </Link>
             </li>
           ))}
         </ul>
