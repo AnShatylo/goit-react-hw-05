@@ -1,0 +1,22 @@
+.field {
+  background-color: #c6c6c63a;
+  outline: none;
+  border: 1px solid #f8f8f8;
+  border-radius: 0;
+  padding: 8px 15px;
+  color: #0f1363;
+}
+
+.submit {
+  padding: 8px 15px;
+  background-color: #0f1363;
+  border: 1px solid #f8f8f8;
+  border-radius: 0;
+  color: #f8f8f8;
+  transition: 300ms background-color linear;
+}
+
+.submit:hover,
+.submit:focus {
+  background-color: #1a1f7d;
+}

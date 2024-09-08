@@ -1,0 +1,8 @@
+.error {
+  color: brown;
+  font-weight: 600;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  margin-top: 10px;
+}
