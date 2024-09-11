@@ -1,0 +1,10 @@
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.castItem {
+    width: calc((100% - 150px) / 7);
+}

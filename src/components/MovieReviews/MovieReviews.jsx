@@ -36,7 +36,7 @@ export default function MovieReviews() {
         <>
           {movieReviews.results.map(review => (
             <div key={review.id} className={css.reviewItem}>
-              <p>{review.author_details.rating}</p>
+              <p className={css.rating}>{review.author_details.rating}</p>
               <p className={css.reviewName}>{review.author}</p>
               <p>{review.content}</p>
             </div>

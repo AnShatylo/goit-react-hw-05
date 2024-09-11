@@ -43,7 +43,7 @@ export default function MoviesPage() {
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
+      <form className={css.searchForm} onSubmit={handleSubmit}>
         <input className={css.field} type="text" name="query" />
         <button className={css.submit} type="submit">
           Search

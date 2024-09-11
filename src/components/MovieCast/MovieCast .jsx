@@ -27,10 +27,10 @@ export default function MovieCast() {
   }, [movieId]);
 
   return (
-    <>
+    <div>
       {error && <ErrorMessage />}
       {movieCast && (
-        <>
+        <div className={css.wrapper}>
           {movieCast.cast.map(cast => (
             <div key={cast.id} className={css.castItem}>
               <img
@@ -42,8 +42,8 @@ export default function MovieCast() {
               <p>{cast.character}</p>
             </div>
           ))}
-        </>
+        </div>
       )}
-    </>
+    </div>
   );
 }

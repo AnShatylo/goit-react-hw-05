@@ -1,0 +1,18 @@
+.reviewItem {
+    padding: 30px;
+    margin-bottom: 30px;
+    border: 1px solid #0f13632c;
+}
+
+.rating {
+    font-weight: 500;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.reviewName {
+    color: #0f1363;
+    font-weight: 800;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
