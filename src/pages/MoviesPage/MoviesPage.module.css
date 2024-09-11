@@ -24,13 +24,3 @@
 .submit:focus {
   background-color: #1a1f7d;
 }
-
-.movieList li a {
-  color: #0f1363;
-  font-weight: 600;
-}
-
-.movieList li a:hover, .movieList li a:focus {
-  color: #040744;
-  
-}

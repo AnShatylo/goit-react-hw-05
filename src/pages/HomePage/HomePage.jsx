@@ -1,9 +1,7 @@
 import { useState, useEffect } from 'react';
 import { getMovies } from '../../services/movies-api';
-
+import MovieList from '../../components/MovieList/MovieList';
 import ErrorMessage from '../../components/ErrorMessage/ErrorMessage';
-import css from './HomePage.module.css';
-import { Link } from 'react-router-dom';
 
 export default function HomePage() {
   const [movies, setMovies] = useState([]);
@@ -28,15 +26,7 @@ export default function HomePage() {
     <>
       <h1>Trending today</h1>
       {error && <ErrorMessage />}
-    {movies && 
-      <ul className={css.movieList}>
-        {movies.map(movie => (
-          <li key={movie.id}>
-            <Link to={`/movies/${movie.id}`}>{movie.title}</Link>
-          </li>
-        ))}
-      </ul>
-        }
+      {movies && <MovieList movies={movies} />}
     </>
   );
 }

@@ -1,6 +1,7 @@
-import { useSearchParams, Link, useLocation } from 'react-router-dom';
+import { useSearchParams, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { searchMovies } from '../../services/movies-api';
+import MovieList from '../../components/MovieList/MovieList';
 import css from './MoviesPage.module.css';
 
 export default function MoviesPage() {
@@ -50,17 +51,7 @@ export default function MoviesPage() {
         </button>
       </form>
       {error && <p>{error}</p>}
-      {movies && (
-        <ul className={css.movieList}>
-          {movies.map(movie => (
-            <li key={movie.id}>
-              <Link to={`/movies/${movie.id}`} state={location}>
-                {movie.title}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      )}
+      {movies && <MovieList movies={movies} location={{ from: location }} />}
     </>
   );
 }
